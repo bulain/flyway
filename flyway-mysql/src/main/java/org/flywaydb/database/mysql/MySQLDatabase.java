@@ -274,12 +274,12 @@ public class MySQLDatabase extends Database<MySQLConnection> {
         ensureDatabaseIsRecentEnough("5.1");
         if (databaseType instanceof MariaDBDatabaseType) {
 
-            ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("10.3", org.flywaydb.core.internal.license.Edition.ENTERPRISE);
+            //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("10.3", org.flywaydb.core.internal.license.Edition.ENTERPRISE);
 
-            recommendFlywayUpgradeIfNecessary("10.11");
+            //recommendFlywayUpgradeIfNecessary("10.11");
         } else {
 
-            ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", org.flywaydb.core.internal.license.Edition.ENTERPRISE);
+            //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", org.flywaydb.core.internal.license.Edition.ENTERPRISE);
 
 
 
@@ -292,7 +292,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
 
 
 
-            recommendFlywayUpgradeIfNecessary("8.0");
+            //recommendFlywayUpgradeIfNecessary("8.0");
         }
     }
 

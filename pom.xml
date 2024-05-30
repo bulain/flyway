@@ -66,15 +66,15 @@
 
     <modules>
         <module>flyway-core</module>
-        <module>flyway-community-db-support</module>
+        <!--<module>flyway-community-db-support</module>
         <module>flyway-gradle-plugin</module>
         <module>flyway-maven-plugin</module>
         <module>flyway-commandline</module>
         <module>flyway-gcp-bigquery</module>
-        <module>flyway-gcp-spanner</module>
+        <module>flyway-gcp-spanner</module>-->
         <module>flyway-sqlserver</module>
         <module>flyway-mysql</module>
-        <module>flyway-firebird</module>
+        <!--<module>flyway-firebird</module>-->
         <module>flyway-database-oracle</module>
 
 
