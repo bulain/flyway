@@ -40,6 +40,16 @@ public class PostgreSQLConnection extends Connection<PostgreSQLDatabase> {
 
     @Override
     protected void doRestoreOriginalState() throws SQLException {
+        // (openGauss 5.0.0)
+        String versionString = jdbcTemplate.queryForString("select version()");
+        if(versionString.contains("openGauss") || versionString.contains("GaussDB")) {
+            return;
+        }
+        // (PanWeiDB_V2.0)
+        if(versionString.contains("PostgreSQL 9.2.4")){
+            return;
+        }
+
         // Reset the role to its original value in case a migration or callback changed it
         jdbcTemplate.execute("SET ROLE '" + originalRole + "'");
     }
