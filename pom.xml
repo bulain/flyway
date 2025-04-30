@@ -50,12 +50,12 @@
 
     <modules>
         <module>flyway-core</module>
-        <module>flyway-gradle-plugin</module>
+        <!--<module>flyway-gradle-plugin</module>
         <module>flyway-maven-plugin</module>
-        <module>flyway-commandline</module>
+        <module>flyway-commandline</module>-->
         <module>flyway-database</module>
-        <module>flyway-experimental</module>
-        <module>flyway-reports</module>
+        <!--<module>flyway-experimental</module>
+        <module>flyway-reports</module>-->
 
 
 
@@ -760,11 +760,11 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
