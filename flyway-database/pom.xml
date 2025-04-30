@@ -15,24 +15,24 @@
     <version>${project.parent.version}</version>
 
     <modules>
-        <module>flyway-database-db2</module>
+        <!--<module>flyway-database-db2</module>
         <module>flyway-database-derby</module>
         <module>flyway-database-hsqldb</module>
-        <module>flyway-database-informix</module>
+        <module>flyway-database-informix</module>-->
         <module>flyway-database-postgresql</module>
         <module>flyway-database-oracle</module>
-        <module>flyway-database-mongodb</module>
+        <!--<module>flyway-database-mongodb</module>
         <module>flyway-database-redshift</module>
         <module>flyway-database-saphana</module>
         <module>flyway-database-snowflake</module>
         <module>flyway-database-sybasease</module>
         <module>flyway-firebird</module>
         <module>flyway-gcp-bigquery</module>
-        <module>flyway-gcp-spanner</module>
+        <module>flyway-gcp-spanner</module>-->
         <module>flyway-mysql</module>
-        <module>flyway-singlestore</module>
+        <!--<module>flyway-singlestore</module>-->
         <module>flyway-sqlserver</module>
-        <module>flyway-database-cassandra</module>
+        <!--<module>flyway-database-cassandra</module>-->
 
 
 

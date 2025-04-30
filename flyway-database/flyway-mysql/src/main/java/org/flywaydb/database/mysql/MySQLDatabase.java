@@ -247,7 +247,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
 
         ensureDatabaseIsRecentEnough("5.1");
 
-        ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", Tier.PREMIUM, configuration);
+        //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", Tier.PREMIUM, configuration);
 
 
 
@@ -261,7 +261,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
 
 
 
-        recommendFlywayUpgradeIfNecessary("8.1");
+        //recommendFlywayUpgradeIfNecessary("8.1");
 
     }
 
