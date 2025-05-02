@@ -23,6 +23,7 @@
         <module>flyway-database-oracle</module>
         <module>flyway-database-dmsql</module>
         <module>flyway-database-kingbase</module>
+        <module>flyway-database-oceanbase</module>
         <!--<module>flyway-database-mongodb</module>
         <module>flyway-database-redshift</module>
         <module>flyway-database-saphana</module>
