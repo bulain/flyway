@@ -10,20 +10,13 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>flyway-database-oceanbase</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>flyway-database-gbase8s</artifactId>
     <name>${project.artifactId}</name>
-    <version>${project.parent.version}</version>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-mysql</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
@@ -76,4 +69,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

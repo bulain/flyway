@@ -19,6 +19,7 @@
         <module>flyway-database-derby</module>
         <module>flyway-database-hsqldb</module>
         <module>flyway-database-informix</module>-->
+        <module>flyway-database-gbase8s</module>
         <module>flyway-database-postgresql</module>
         <module>flyway-database-oracle</module>
         <module>flyway-database-dmsql</module>
