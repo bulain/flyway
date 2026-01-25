@@ -59,15 +59,15 @@ public class SQLServerDatabase extends Database<SQLServerConnection> {
         if (isAzure()) {
             ensureDatabaseIsRecentEnough("11.0");
 
-            ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("12.0", Tier.PREMIUM, configuration);
+            //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("12.0", Tier.PREMIUM, configuration);
 
-            recommendFlywayUpgradeIfNecessary("12.0");
+            //recommendFlywayUpgradeIfNecessary("12.0");
         } else {
             ensureDatabaseIsRecentEnough("10.0");
 
-            ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("14.0", Tier.PREMIUM, configuration);
+            //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("14.0", Tier.PREMIUM, configuration);
 
-            recommendFlywayUpgradeIfNecessary("17.0");
+            //recommendFlywayUpgradeIfNecessary("17.0");
         }
     }
 

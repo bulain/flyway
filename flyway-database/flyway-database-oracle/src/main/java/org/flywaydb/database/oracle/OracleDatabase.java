@@ -56,13 +56,13 @@ public class OracleDatabase extends Database<OracleConnection> {
     @Override
     public void ensureSupported(Configuration configuration) {
         ensureDatabaseIsRecentEnough("10");
-        if (!getVersion().isAtLeast("12")) {
+        /*if (!getVersion().isAtLeast("12")) {
             LOG.info(databaseType.getName() + " " + computeVersionDisplayName(getVersion()) + " is outside of Redgate support. You may be able to find help with the Flyway community if you need it, see " + COMMUNITY_SUPPORT + " for details");
         } else {
             ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("18.0", Tier.PREMIUM, configuration);
-        }
+        }*/
 
-        recommendFlywayUpgradeIfNecessaryForMajorVersion("23.0");
+        //recommendFlywayUpgradeIfNecessaryForMajorVersion("23.0");
     }
 
     @Override

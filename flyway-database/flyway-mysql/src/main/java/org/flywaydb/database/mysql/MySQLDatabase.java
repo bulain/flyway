@@ -64,6 +64,10 @@ public class MySQLDatabase extends Database<MySQLConnection> {
      * Whether the event scheduler table is queryable.
      */
     final boolean eventSchedulerQueryable;
+    /**
+     * Whether tidb runing mode.
+     */
+    private final boolean runningTidbMode;
 
     public MySQLDatabase(Configuration configuration, JdbcConnectionFactory jdbcConnectionFactory, StatementInterceptor statementInterceptor) {
         super(configuration, jdbcConnectionFactory, statementInterceptor);
@@ -73,6 +77,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
         wsrepOn = isMariaDB() && isWsrepOn(jdbcTemplate);
         gtidConsistencyEnforced = isMySQL() && isRunningInGTIDConsistencyMode(jdbcTemplate);
         eventSchedulerQueryable = isMySQL() || isEventSchedulerQueryable(jdbcTemplate);
+        runningTidbMode = isMySQL() || isRunningTidbMode(jdbcTemplate);
     }
 
     private static boolean isEventSchedulerQueryable(JdbcTemplate jdbcTemplate) {
@@ -130,6 +135,19 @@ public class MySQLDatabase extends Database<MySQLConnection> {
         return false;
     }
 
+    static boolean isRunningTidbMode(JdbcTemplate jdbcTemplate) {
+        try {
+            String version = jdbcTemplate.queryForString("SELECT version()");
+            if (version!=null && version.contains("TiDB")) {
+                LOG.debug("Detected running as TiDB model");
+                return true;
+            }
+        } catch (SQLException e) {
+            LOG.debug("Unable to detect whether database running as TiDB model.");
+        }
+        return false;
+    }
+
     boolean isMySQL() {
         return databaseType instanceof MySQLDatabaseType;
     }
@@ -154,7 +172,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
      * necessarily ON as well.
      */
     protected boolean isCreateTableAsSelectAllowed() {
-        return !pxcStrict && !gtidConsistencyEnforced;
+        return !pxcStrict && !gtidConsistencyEnforced && !runningTidbMode;
     }
 
     @Override
@@ -247,7 +265,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
 
         ensureDatabaseIsRecentEnough("5.1");
 
-        ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", Tier.PREMIUM, configuration);
+        //ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", Tier.PREMIUM, configuration);
 
 
 
@@ -261,7 +279,7 @@ public class MySQLDatabase extends Database<MySQLConnection> {
 
 
 
-        recommendFlywayUpgradeIfNecessary("9.4");
+        //recommendFlywayUpgradeIfNecessary("9.4");
 
     }
 
