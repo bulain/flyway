@@ -28,7 +28,6 @@
     <artifactId>flyway-sqlserver</artifactId>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
-    <version>${project.parent.version}</version>
 
     <dependencies>
         <dependency>

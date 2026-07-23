@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-parent</artifactId>
+        <version>8.5.13</version>
+    </parent>
+
+    <artifactId>flyway-database</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <modules>
+        <module>flyway-database-gbase8s</module>
+        <module>flyway-database-dmsql</module>
+        <module>flyway-database-kingbase</module>
+        <module>flyway-database-oceanbase</module>
+        <module>flyway-database-polardbx</module>
+    </modules>
+
+</project>

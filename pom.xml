@@ -65,15 +65,16 @@
 
     <modules>
         <module>flyway-core</module>
-        <module>flyway-community-db-support</module>
-        <module>flyway-gradle-plugin</module>
-        <module>flyway-maven-plugin</module>
-        <module>flyway-commandline</module>
-        <module>flyway-gcp-bigquery</module>
-        <module>flyway-gcp-spanner</module>
+        <!--<module>flyway-community-db-support</module>-->
+        <!--<module>flyway-gradle-plugin</module>-->
+        <!--<module>flyway-maven-plugin</module>-->
+        <!--<module>flyway-commandline</module>-->
+        <!--<module>flyway-gcp-bigquery</module>-->
+        <!--<module>flyway-gcp-spanner</module>-->
         <module>flyway-sqlserver</module>
         <module>flyway-mysql</module>
-        <module>flyway-firebird</module>
+        <module>flyway-database</module>
+        <!--<module>flyway-firebird</module>-->
 
 
 
@@ -553,11 +554,11 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
@@ -611,7 +612,6 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>8</release>
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
