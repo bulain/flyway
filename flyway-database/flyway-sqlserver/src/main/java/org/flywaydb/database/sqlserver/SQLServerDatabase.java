@@ -58,7 +58,7 @@ public class SQLServerDatabase extends Database<SQLServerConnection> {
 
     @Override
     public void ensureSupported(final Configuration configuration) {
-        if (isAzure()) {
+        /*if (isAzure()) {
             ensureDatabaseIsRecentEnough("11.0");
 
             ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("12.0", Tier.PREMIUM, configuration);
@@ -70,7 +70,7 @@ public class SQLServerDatabase extends Database<SQLServerConnection> {
             ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("14.0", Tier.PREMIUM, configuration);
 
             recommendFlywayUpgradeIfNecessary("17.0");
-        }
+        }*/
     }
 
     @Override

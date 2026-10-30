@@ -57,7 +57,7 @@ public class OracleDatabase extends Database<OracleConnection> {
 
     @Override
     public void ensureSupported(final Configuration configuration) {
-        ensureDatabaseIsRecentEnough("10");
+        /*ensureDatabaseIsRecentEnough("10");
         if (!getVersion().isAtLeast("12")) {
             LOG.info(databaseType.getName()
                 + " "
@@ -69,7 +69,7 @@ public class OracleDatabase extends Database<OracleConnection> {
             ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("18.0", Tier.PREMIUM, configuration);
         }
 
-        recommendFlywayUpgradeIfNecessaryForMajorVersion("23.0");
+        recommendFlywayUpgradeIfNecessaryForMajorVersion("23.0");*/
     }
 
     @Override

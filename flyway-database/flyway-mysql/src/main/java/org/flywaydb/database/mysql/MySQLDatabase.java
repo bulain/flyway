@@ -270,11 +270,11 @@ public class MySQLDatabase extends Database<MySQLConnection> {
     @Override
     public void ensureSupported(final Configuration configuration) {
 
-        ensureDatabaseIsRecentEnough("5.1");
+        /*ensureDatabaseIsRecentEnough("5.1");
 
         ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("8.0", Tier.PREMIUM, configuration);
 
-        recommendFlywayUpgradeIfNecessary("9.4");
+        recommendFlywayUpgradeIfNecessary("9.4");*/
     }
 
     @Override

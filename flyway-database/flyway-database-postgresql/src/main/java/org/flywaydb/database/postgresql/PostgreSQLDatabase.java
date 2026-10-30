@@ -47,11 +47,11 @@ public class PostgreSQLDatabase extends Database<PostgreSQLConnection> {
 
     @Override
     public void ensureSupported(final Configuration configuration) {
-        ensureDatabaseIsRecentEnough("9.0");
+        /*ensureDatabaseIsRecentEnough("9.0");
 
         ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("10", Tier.PREMIUM, configuration);
 
-        recommendFlywayUpgradeIfNecessaryForMajorVersion("18");
+        recommendFlywayUpgradeIfNecessaryForMajorVersion("18");*/
     }
 
     @Override

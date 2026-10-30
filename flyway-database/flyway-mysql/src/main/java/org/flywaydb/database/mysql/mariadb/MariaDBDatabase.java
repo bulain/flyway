@@ -39,8 +39,8 @@ public class MariaDBDatabase extends MySQLDatabase {
 
     @Override
     public void ensureSupported(final Configuration configuration) {
-        ensureDatabaseIsRecentEnough("5.1");
+       /* ensureDatabaseIsRecentEnough("5.1");
         ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition("10.3", Tier.PREMIUM, configuration);
-        recommendFlywayUpgradeIfNecessary("12.3");
+        recommendFlywayUpgradeIfNecessary("12.3");*/
     }
 }

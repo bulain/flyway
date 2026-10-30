@@ -54,14 +54,14 @@
 
   <modules>
     <module>flyway-core</module>
-    <module>flyway-plugins</module>
-    <module>flyway-commandline</module>
+    <!--<module>flyway-plugins</module>
+    <module>flyway-commandline</module>-->
     <module>flyway-database</module>
-    <module>flyway-locations</module>
+    <!--<module>flyway-locations</module>
     <module>flyway-reports</module>
     <module>flyway-nc</module>
     <module>flyway-shades</module>
-    <module>flyway-command</module>
+    <module>flyway-command</module>-->
 
 
 
